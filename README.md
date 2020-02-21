@@ -1,14 +1,16 @@
 # electron-quick-start
 
 ## This version has been modified to replicate an issue with cookies retrieval
-** Use settings.js file to set your domain
-** http-server directory contains a simple node server where a cookie is set
+** Use settings.js file to set your domain **
+** http-server directory contains a simple node server where a cookie is set **
+
 
 **Clone and run for a quick way to see Electron in action.**
 
 This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
 
 **Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
+
 
 A basic Electron application needs just these files:
 
