@@ -1,8 +1,8 @@
 # electron-quick-start
 
 ## This version has been modified to replicate an issue with cookies retrieval
-**Use settings.js file to set your domain**
-**http-server directory contains a simple node server where a cookie is set**
+- **Use settings.js file to set your domain**
+- **http-server directory contains a simple node server where a cookie is set**
 
 ```bash
 # Clone this branch
