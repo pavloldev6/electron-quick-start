@@ -1,8 +1,22 @@
 # electron-quick-start
 
 ## This version has been modified to replicate an issue with cookies retrieval
-** Use settings.js file to set your domain **
-** http-server directory contains a simple node server where a cookie is set **
+**Use settings.js file to set your domain**
+**http-server directory contains a simple node server where a cookie is set**
+
+```bash
+# Clone this branch
+git clone https://github.com/pavloldev6/electron-quick-start.git#secure-cookies-get-problem
+# Go into the repository
+cd electron-quick-start
+# Install dependencies
+npm install
+# Set your domain in settings.js
+#Run the server
+npm run http-server
+# Run the app
+npm start
+```
 
 
 **Clone and run for a quick way to see Electron in action.**
