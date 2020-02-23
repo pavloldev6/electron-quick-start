@@ -19,7 +19,7 @@ async function createWindow () {
 
   const session = mainWindow.webContents.session;
 
-  session.cookies.flushStore();
+  session.clearStorageData();
 
   session.webRequest.onCompleted(async (details) => {
     if (details.url.includes(settings.requestDomain)) {

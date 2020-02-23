@@ -5,6 +5,11 @@ const settings = require('./settings');
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
-fetch(`https://${settings.requestDomain}`).then((response) => {
+fetch(`https://${settings.requestDomain}/hello`, {
+  method: 'GET',
+  headers: {
+    'Origin': settings.requestDomain
+  }
+}).then((response) => {
   console.log(response);
 });

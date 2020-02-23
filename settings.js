@@ -1,5 +1,5 @@
 const settings = {
-  requestDomain: 'f70644db.ngrok.io'
+  requestDomain: 'localhost:3000'
 }
 
 module.exports = settings;

@@ -1,6 +1,7 @@
 
 const settings = require('../settings');
 const express = require('express')
+const { uuid } = require('uuidv4');
 const Cookies = require('cookies');
 const fs = require('fs');
 const https = require('https');
@@ -8,15 +9,19 @@ const app = express();
 const port = 3000;
 
 
-app.get('/', (request, response) => {
+app.get('/hello', (request, response) => {
   const cookies = new Cookies(request, response, { secure: true });
   const requestDomainTokens = settings.requestDomain.split('.');
   const rDomainWithoutSubdomain = '.' + requestDomainTokens.slice(requestDomainTokens.length - 2).join('.');
-  cookies.set('sessionId', 'sessionIdCookieValue', {
+
+  const domain = settings.requestDomain; // set domain to be equal to the one in settings (including subdomain)
+  // const domain = rDomainWithoutSubdomain; // set domain to be equal to domain only (without subdomain)
+  const generatedId = uuid();
+  cookies.set('sessionId', generatedId, {
     httpOnly: true,
     secure: true,
-    // domain: settings.requestDomain,
-    domain: rDomainWithoutSubdomain,
+    // domain: 'localhost',
+    sameSite: "strict"
   });
   response.send('Hello from Express!')
 })
